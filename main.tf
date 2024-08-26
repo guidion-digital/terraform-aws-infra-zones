@@ -9,7 +9,7 @@ terraform {
 }
 
 module "helper_acm_validation" {
-  source   = "app.terraform.io/guidion/helper-acm-validation/aws"
+  source   = "guidion-digital/helper-acm-validation/aws"
   version  = "1.0.0"
   for_each = var.create_certificates ? toset(var.zones) : []
 
