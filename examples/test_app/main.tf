@@ -17,7 +17,7 @@ module "zones" {
   }
 
   source   = "../../"
-  for_each = ["example.com"]
+  for_each = ["test1.example.com", "test2.exmple.com"]
 
   create_certificates = false
   zones               = each.value.zones
