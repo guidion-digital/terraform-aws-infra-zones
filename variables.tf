@@ -13,4 +13,3 @@ variable "create_certificates" {
   type        = bool
   default     = true
 }
-
