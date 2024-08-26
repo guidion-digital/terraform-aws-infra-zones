@@ -17,9 +17,8 @@ module "zones" {
   }
 
   source   = "../../"
-  for_each = var.projects
+  for_each = ["example.com"]
 
-  projects            = "test"
   create_certificates = false
   zones               = each.value.zones
   assume_accounts     = each.value.accounts
