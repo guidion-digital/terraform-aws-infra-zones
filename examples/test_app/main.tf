@@ -1,3 +1,5 @@
+variable "projects" {}
+
 # In a real case this first provider would assume into a role in another account
 # holding the Route53 zones, whilst the second would be the account we want to
 # create the zones _from_ (this one)
@@ -17,7 +19,7 @@ module "zones" {
   }
 
   source   = "../../"
-  for_each = toset(["test1.example.com", "test2.exmple.com"])
+  for_each = var.projects
 
   create_certificates = false
   zones               = each.value.zones
