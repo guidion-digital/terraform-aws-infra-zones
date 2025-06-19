@@ -10,7 +10,7 @@ terraform {
 
 module "helper_acm_validation" {
   source   = "app.terraform.io/guidion/helper-acm-validation/aws"
-  version  = "1.0.0"
+  version  = "1.2.0-alpha-0.0.3"
   for_each = var.create_certificates ? toset(var.zones) : []
 
   providers = {
